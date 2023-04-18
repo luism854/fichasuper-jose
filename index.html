@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="scipt.js"></script>
+    <title>Technical specification</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="nav-container">
+            <div class="title">
+                <h1>
+                    Formato de ficha Tecnica.
+                </h1>
+            </div>
+        </nav>
+    </div>
+<br>
+
+<h2 class="caracteristicas">
+    Caracteristicas del producto
+</h2>
+
+<br>
+
+    <div class="imput-container">
+        <ul class="box-text">
+            <div class="imput-name">
+                <label>Nombre del producto: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>Linea de produccion: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>Cantidad del producto: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>Valor del producto: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>Cajas registradoras: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>Escaners: </label>
+            </div><br>
+            <div class="imput-name">
+                <label>aaaa </label>
+            </div><br>
+        </ul>
+        <ul class="box-input">
+            <div class="imput-name ab">
+                <input type="text" placeholder="Nombre del producto" id="nombrep">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="text" placeholder="Linea de produccion" id="lineap">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="number" placeholder="Cantidad numerica" id="cantidadp">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="number" placeholder="Valor total" id="valuep">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="number" placeholder="Cantidad" id="cajap">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="number" placeholder="Cantidad" id="Escanerp">
+            </div><br>
+            <div class="imput-name ab">
+                <input type="number" placeholder="Cantidad" id="Escanerp">
+            </div><br>
+        </ul>
+    </div>
+
+	<h2 class="imput-nam">Inventario de productos</h2>
+	<table id="tabla-productos">
+	</table>
+    <div class="imput-nam">
+        <button onclick="mostrarInventario()">Mostrar inventario</button>
+    </div>
+	<h2 class="imput-nam">Cuentas de cobro</h2>
+	<ul id="cuentas-cobro">
+	</ul>
+    <div class="imput-nam">
+        <button onclick="mostrarCuentasCobro()">Mostrar cuentas de cobro</button>
+    </div>
+	<h2 class="imput-nam">Clientes y proveedores</h2>
+	<ul id="clientes-proveedores">
+		<!-- Aquí se mostrarán los clientes y proveedores -->
+	</ul>
+    <div class="imput-nam">
+	    <button onclick="mostrarClientesProveedores()">Mostrar clientes y proveedores</button>
+    </div>
+	<h2 class="imput-nam">Cierre de caja</h2>
+	<p class="imput-nam">El total de la caja es: <span id="total-caja"></span></p>
+    <div class="imput-nam">
+	<button onclick="cerrarCaja()">Cerrar caja</button>
+    </div>
+	<h2 class="imput-nam">Generar factura de venta</h2>
+	<form id="formulario-venta">
+		<label for="nombre-cliente" class="imput-nam">Nombre del cliente:</label>
+		<input type="text" id="nombre-cliente" name="nombre-cliente"><br>
+		<label for="producto" class="imput-nam">Producto:</label>
+		<input type="text" id="producto" name="producto"><br>
+		<label for="cantidad" class="imput-nam">Cantidad:</label>
+		<input type="number" id="cantidad" name="cantidad" min="1"><br>
+        <div class="imput-nam">
+            <button type="submit" onclick="generarFactura()">Generar factura</button>
+        </div>
+	</form>
+
+    <div class="imput-nam"  >
+        <h2>Ingreso al sistema</h2>
+    </div>
+	<form id="formulario-ingreso">
+		<label for="usuario" class="imput-nam">Usuario:</label>
+		<input type="text" id="usuario" name="usuario"><br>
+		<label for="contrasena" class="imput-nam">Contraseña:</label>
+		<input type="password" id="contrasena" name="contrasena"><br>
+		<label for="rol" class="imput-nam">Rol:</label>
+		<select id="rol" name="rol">
+			<option value="admin">Administrador</option>
+			<option value="vendedor">Vendedor</option>
+			<option value="cajero">Cajero</option>
+		</select><br>
+        <div class="imput-nam">
+		<button type="submit" onclick="ingresar()">Ingresar</button>
+        </div>
+	</form>
+</body>
+</html>
